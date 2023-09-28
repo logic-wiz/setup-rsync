@@ -19,7 +19,7 @@ runs:
           curl.exe --output libxxhash-0.8.1-1-x86_64.pkg.tar.zst https://repo.msys2.org/msys/x86_64/libxxhash-0.8.1-1-x86_64.pkg.tar.zst
           zstd -d libxxhash-0.8.1-1-x86_64.pkg.tar.zst
           tar -xvf libxxhash-0.8.1-1-x86_64.pkg.tar
-          mv usr/bin/msys-xxhash-0.8.0.dll "C:\Program Files\Git\usr\bin\\"
+          mv usr/bin/msys-xxhash-0.dll "C:\Program Files\Git\usr\bin\\"
 
           curl.exe --output libopenssl-1.1.1.m-1-x86_64.pkg.tar.zst --url https://repo.msys2.org/msys/x86_64/libopenssl-1.1.1.m-1-x86_64.pkg.tar.zst
           zstd -d libopenssl-1.1.1.m-1-x86_64.pkg.tar.zst
