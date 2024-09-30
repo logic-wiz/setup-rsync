@@ -21,9 +21,9 @@ runs:
           tar -xvf libxxhash-0.8.1-1-x86_64.pkg.tar
           mv usr/bin/msys-xxhash-0.dll "C:\Program Files\Git\usr\bin\\"
 
-          curl.exe --output libopenssl-1.1.1.s-2-x86_64.pkg.tar.zst --url https://repo.msys2.org/msys/x86_64/libopenssl-1.1.1.s-2-x86_64.pkg.tar.zst
-          zstd -d libopenssl-1.1.1.s-2-x86_64.pkg.tar.zst
-          tar -xvf libopenssl-1.1.1.s-2-x86_64.pkg.tar
+          curl.exe --output libopenssl-3.3.2.1-x86_64.pkg.tar.zst --url https://repo.msys2.org/msys/x86_64/libopenssl-3.3.2.1-x86_64.pkg.tar.zst
+          zstd -d libopenssl-3.3.2.1-x86_64.pkg.tar.zst
+          tar -xvf libopenssl-3.3.2.1-x86_64.pkg.tar
           mv usr/bin/msys-crypto-1.1.dll "C:\Program Files\Git\usr\bin\\"
 
           echo "rsync installed on windows runner"
