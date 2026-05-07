@@ -6,7 +6,7 @@ runs:
   steps:
     - name: Install Rsync
       run: |
-        if [[ $OSTYPE == 'msys'* ]]; then
+        if [[ "$RUNNER_OS" == 'Windows' ]]; then
           echo "windows runner detected"
           curl.exe --output rsync-3.4.1-1-x86_64.pkg.tar.zst --url https://repo.msys2.org/msys/x86_64/rsync-3.4.1-1-x86_64.pkg.tar.zst
           zstd -d rsync-3.4.1-1-x86_64.pkg.tar.zst
@@ -27,13 +27,13 @@ runs:
           mv usr/bin/msys-crypto-3.dll "C:\Program Files\Git\usr\bin\\"
 
           echo "rsync installed on windows runner"
-        elif [[ $OSTYPE == 'darwin'* ]]; then 
+        elif [[ "$RUNNER_OS" == 'macOS' ]]; then
           echo "macos runner detected"
           brew install rsync
           echo "rsync installed on macos runner"
         else
           echo "ubuntu runner detected"
-          sudo apt-get install rsync
+          sudo apt-get install -y rsync
           echo "rsync installed on ubuntu runner"
         fi
       shell: bash
